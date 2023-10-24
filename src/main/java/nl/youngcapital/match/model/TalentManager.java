@@ -7,12 +7,19 @@ import jakarta.persistence.Id;
 
 @Entity
 public class TalentManager {
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long id;
+
 	private String naam;
 	private String email;
 	private String telefoonnummer;
-	
+
+	public long getId() {
+		return id;
+	}
+
 	public String getNaam() {
 		return naam;
 	}
@@ -33,6 +40,5 @@ public class TalentManager {
 	public void setTelefoonnummer(String telefoonnummer) {
 		this.telefoonnummer = telefoonnummer;
 	}
-	
-	
+
 }

@@ -10,6 +10,8 @@ public class Vacature {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long id;
+
 	private String titel;
 	private String vereisten;
 	private String omschrijving;
@@ -19,7 +21,11 @@ public class Vacature {
 	private boolean beschikbaar;
 	private int opdrachtduur;
 	private int uren;
-	
+
+	public long getId() {
+		return id;
+	}
+
 	public String getTitel() {
 		return titel;
 	}
@@ -82,5 +88,4 @@ public class Vacature {
 	public void setUren(int uren) {
 		this.uren = uren;
 	}
-	
 }
